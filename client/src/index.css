@@ -1,0 +1,22 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-slate-50 text-slate-800 antialiased;
+  }
+}
+
+/* Custom React Flow Styling Enhancements */
+.react-flow__controls {
+  @apply bg-white shadow-lg border border-slate-200 rounded-lg overflow-hidden;
+}
+
+.react-flow__controls-button {
+  @apply border-b border-slate-100 hover:bg-slate-50 text-slate-600;
+}
+
+.react-flow__attribution {
+  display: none;
+}
