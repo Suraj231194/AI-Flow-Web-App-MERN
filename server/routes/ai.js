@@ -5,6 +5,7 @@ const router = express.Router();
 router.post('/ask-ai', async (req, res) => {
     const { prompt } = req.body;
 
+    // Validate input to ensure prompt exists
     if (!prompt) return res.status(400).json({ error: 'Prompt is required' });
 
     try {
