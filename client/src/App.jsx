@@ -16,7 +16,10 @@ import InputNode from './components/InputNode';
 import OutputNode from './components/OutputNode';
 import './index.css';
 
-const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:5000/api';
+let API_URL = import.meta.env.VITE_API_URL || 'http://localhost:5000/api';
+if (API_URL && !API_URL.endsWith('/api')) {
+  API_URL += '/api';
+}
 
 const nodeTypes = {
   inputNode: InputNode,
